@@ -36,7 +36,7 @@ public class Login_StepDefinitions {
         wait.until(ExpectedConditions.urlContains(expected));
         String actual=Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(actual.contains(expected));
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @When("I login as a student")

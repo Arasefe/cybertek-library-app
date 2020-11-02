@@ -28,11 +28,11 @@ public class UserManagementPage {
 
     @FindBy(xpath="//input[@type='search']")
     public WebElement searchBox;
-
+    //table[@id='tbl_users']
     @FindBy(xpath = "//table[@id='tbl_users']//tr/td")
     public List<WebElement> userManagementTable;
 
-    @FindBy(xpath = "//table[@id='tbl_users']//tr/td")
+    @FindBy(xpath = "(//table[@id='tbl_users']//tr/td)[1]")
     public WebElement editUserBtn;
 
 }

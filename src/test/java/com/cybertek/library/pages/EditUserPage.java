@@ -12,6 +12,7 @@ public class EditUserPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
+
     @FindBy(xpath = "//select[@id='status']")
     public WebElement editUserStatus;
 
