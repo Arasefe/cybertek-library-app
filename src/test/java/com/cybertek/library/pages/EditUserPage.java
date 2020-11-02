@@ -13,9 +13,29 @@ public class EditUserPage {
     }
     WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
 
+    @FindBy(xpath = "//input[@name='full_name']")
+    public WebElement fullName;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement email;
+
+    @FindBy(xpath = "//select[@id='user_group_id']")
+    public WebElement editUserGroup;
+
     @FindBy(xpath = "//select[@id='status']")
     public WebElement editUserStatus;
 
+    @FindBy(xpath = "//input[@name='start_date']")
+    public WebElement editStartDate;
+
+    @FindBy(xpath = "//input[@name='start_date']")
+    public WebElement editEndDate;
+
+    @FindBy(xpath = "//textarea[@id='address']")
+    public WebElement editAddress;
 
 
 

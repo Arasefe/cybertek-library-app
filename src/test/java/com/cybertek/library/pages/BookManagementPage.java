@@ -35,6 +35,9 @@ public class BookManagementPage {
     @FindBy(xpath="//table[@id='tbl_books']//tr/td")
     public List<WebElement> bookManagementTable;
 
+    @FindBy(xpath="(//table[@id='tbl_users']//tr/td)[1]")
+    public WebElement bookManagementEditUser;
+
 
     public void isBooksDisplayed(){
         String expected="books";

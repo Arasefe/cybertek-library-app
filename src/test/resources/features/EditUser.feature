@@ -15,7 +15,7 @@ Feature: Login
       | Password   | Aras_Tulpar           |
       | Email      | efehan_pusat@yahoo.com |
       | User Group | Librarian              |
-      | Status     | INACTIVE               |
+      | Status     | ACTIVE               |
       | Start Date | 2020-10-29             |
       | End Date   | 2020-11-29             |
       | Address    | 262 Greensboro ct IL   |
