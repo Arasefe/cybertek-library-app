@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features",             // from content root
         glue= "com/cybertek/library/step_definitions",      // from source root
         dryRun = false,
-        tags="@EditUser"
+        tags="@AddUser"
 
 
 )

@@ -10,12 +10,13 @@ Feature: Login
     Given I am on the login page
     When I login as a librarian
     Then dashboard should be displayed
+    When I click on "Users" link
     And I click on Edit User link and edit the info
-      | Full Name  | Tulpar YILDIRIM          |
-      | Password   | Aras_Tulpar           |
+      | Full Name  | Tulpar YILDIRIM        |
+      | Password   | Aras_Tulpar            |
       | Email      | efehan_pusat@yahoo.com |
       | User Group | Librarian              |
-      | Status     | ACTIVE               |
+      | Status     | ACTIVE                 |
       | Start Date | 2020-10-29             |
       | End Date   | 2020-11-29             |
       | Address    | 262 Greensboro ct IL   |
@@ -23,4 +24,5 @@ Feature: Login
     And I save changes
     #And I close the table
     Then I should be able to verify that user information is edited
+      | Full Name  | Tulpar YILDIRIM        |
     Then I should be able to close the table

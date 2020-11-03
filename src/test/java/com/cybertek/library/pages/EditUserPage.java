@@ -7,6 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+import java.util.Map;
+
 public class EditUserPage {
     public EditUserPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -37,7 +40,10 @@ public class EditUserPage {
     @FindBy(xpath = "//textarea[@id='address']")
     public WebElement editAddress;
 
+    //table[@id='tbl_users']//tr/td[3]
 
+    @FindBy(xpath = "//table[@id='tbl_users']//tr/td[3]")
+    public List<WebElement> updatedFullName;
 
 }
 
