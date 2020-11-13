@@ -14,7 +14,7 @@ Feature: Login
     And I click on Edit User link and edit the info
       | Full Name  | Tulpar YILDIRIM        |
       | Password   | Aras_Tulpar            |
-      | Email      | efehan_pusat@yahoo.com |
+      | Email      | efehan_pusat@gmail.com |
       | User Group | Librarian              |
       | Status     | ACTIVE                 |
       | Start Date | 2020-10-29             |

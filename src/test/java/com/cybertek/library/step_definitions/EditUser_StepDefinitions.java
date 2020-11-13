@@ -6,9 +6,8 @@ import com.cybertek.library.pages.UserManagementPage;
 import com.cybertek.library.utils.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 
 import java.util.ArrayList;
@@ -27,15 +26,12 @@ public class EditUser_StepDefinitions {
     public void i_click_on_edit_user_link_and_edit_the_info(Map<String, String> dataTable) {
         wait.until(ExpectedConditions.elementToBeClickable(userManagementPage.editUserBtn));
         userManagementPage.editUserBtn.click();
-        Select select1 = new Select(editUserPage.editUserGroup);
-        Select select2 = new Select(editUserPage.editUserStatus);
-
-        wait.until(ExpectedConditions.visibilityOfAllElements(editUserPage.editUserStatus));
+        Select select;
+        wait.until(ExpectedConditions.visibilityOf(editUserPage.fullName));
         String fullName = dataTable.get("Full Name");
         String password = dataTable.get("Password");
         String email = dataTable.get("Email");
-//        String user_Group = dataTable.get("User Group");
-//        String status = dataTable.get("Status");
+
         String address = dataTable.get("Address");
 
         editUserPage.fullName.clear();
@@ -44,9 +40,10 @@ public class EditUser_StepDefinitions {
         editUserPage.password.sendKeys(password);
         editUserPage.email.clear();
         editUserPage.email.sendKeys(email);
-        select1.selectByVisibleText(dataTable.get("User Group"));
-
-        select2.selectByVisibleText(dataTable.get("Status"));
+        select= new Select(editUserPage.editUserGroup);
+        select.selectByVisibleText(dataTable.get("User Group"));
+        select = new Select(editUserPage.editUserStatus);
+        select.selectByVisibleText(dataTable.get("Status"));
         editUserPage.editAddress.clear();
         editUserPage.editAddress.sendKeys(address);
 

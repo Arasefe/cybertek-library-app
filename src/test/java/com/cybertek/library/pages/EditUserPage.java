@@ -40,7 +40,6 @@ public class EditUserPage {
     @FindBy(xpath = "//textarea[@id='address']")
     public WebElement editAddress;
 
-    //table[@id='tbl_users']//tr/td[3]
 
     @FindBy(xpath = "//table[@id='tbl_users']//tr/td[3]")
     public List<WebElement> updatedFullName;
