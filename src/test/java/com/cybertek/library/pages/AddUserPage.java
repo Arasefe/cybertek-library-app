@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddUserPage {
+public class AddUserPage extends PageBase{
 
     public AddUserPage(){
         PageFactory.initElements(Driver.getDriver(),this);
